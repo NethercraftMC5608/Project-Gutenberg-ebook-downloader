@@ -1,44 +1,57 @@
 import time
 import os
 import platform
+import sys
+import numbers
 from random_word import RandomWords
 import urllib.request
-
+print (sys.argv)
+ne = sys.argv
+ne.remove(__file__)
 r = RandomWords()
-number = 1
-max = 66186
+provideid = (','.join(ne))
+print (provideid)
+def has_numbers():
+    
+    return any(char.isdigit() for char in provideid)
+number = 0
+numberforcalc = 1
+max = 66185
 url = "https://www.gutenberg.org/ebooks/"
 epub = ".epub.images"
 list = []
 print("Retrieving ebooks from www.gutenberg.org")
-while True:
+loop = True
+if has_numbers() is True:
+    print("downloading ID", provideid)
+    numberforcalc = 1
+    list.clear()
+    number = provideid
     result = str(url) + str(number) + str(epub)
-    number += 1
-    
     list.append(result)
+    loop = False
+
+while loop is True:
+   
+    
+    
+    result = str(url) + str(number) + str(epub)
+    list.append(result)
+    number += 1
+    numberforcalc +=1
+    number
+    
     if number == max:
-        print("Retrieved", number, "Books, out of the maximum of", max, "As of 31st August 2021")
+        print("Retrieved", numberforcalc, "Books, out of the maximum of", max, "As of 31st August 2021")
         time.sleep(3)
         break
-OSPICK = 0
-print("downloading", number, "Books, out of the maximum of", max, "As of 31st August 2021")
+print("downloading", numberforcalc, "Books, out of the maximum of", max, "As of 31st August 2021")
 time.sleep(1)
 print("NOTE, these books are named randomly, just so it doesn't rewrite anything. They still provide title and description in epub reader.")
 time.sleep(5)
 print(platform.system(), "OS found, defaulting file path.")
-platform = platform.system()
-
-if platform is "Windows":
-    OSPICK = "C:\\ebooks"
-if platform is "Darwin":
-    OSPICK = "~/ebooks"
-if platform is "Linux":
-    OSPICK = "~/ebooks"
-dir = OSPICK
 filenum = 1
 failed = 0
-if not os.path.exists(OSPICK):
-    os.makedirs(OSPICK)
 links = list
 for link in links:
     link = link.strip()
@@ -46,7 +59,7 @@ for link in links:
     eys = str(name) + ".epub"
     filename = eys
     if not os.path.isfile(filename):
-        print(filenum, "/", number, "completed.", failed, "failed")
+        print(filenum, "/", numberforcalc, "completed.", failed, "failed")
         print('Downloading: ' + filename)
         filenum += 1
         try:
@@ -58,3 +71,4 @@ for link in links:
             print('  Encountered unknown error. Continuing')
             failed += 1
             filenum -= 1
+print("Done Operation, Downloaded", filenum, "/", numberforcalc, "Last ID was", number)
