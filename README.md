@@ -1,5 +1,5 @@
 # Project-Gutenberg-all-ebook-downloader
-downloads all 60000+ ebooks from Project Gutenberg
+Downloads all 60000+ ebooks from Project Gutenberg's Database.
 
 NOTE: everyone knows that a shitty programmer, has shitty code. and i am that programmer.
 
