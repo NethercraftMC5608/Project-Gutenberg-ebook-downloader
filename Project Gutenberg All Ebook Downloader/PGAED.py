@@ -44,14 +44,13 @@ for link in links:
     link = link.strip()
     name = r.get_random_word()
     eys = str(name) + ".epub"
-    filename = os.path.join(str(dir), eys)
-
+    filename = eys
     if not os.path.isfile(filename):
         print(filenum, "/", number, "completed.", failed, "failed")
         print('Downloading: ' + filename)
         filenum += 1
         try:
-            filename = os.path.join('/home/demo/Downloads', name)
+            filename = os.path.join(filename)
             
             urllib.request.urlretrieve(link, filename)
         except Exception as inst:
