@@ -14,9 +14,9 @@ drag the py file into the directory you need to put the ebooks in, like a calibr
 ~~WARNING FOR LINUX USERS, USE THE CONVERT EPUB TOOL AT YOUR OWN RISK, IT CHANGES ALL OF THE FILES (AND FOLDERS) EXTENSIONS IN THE CURRENT DIRECTORY TO EPUB AS IT DOES NOT DO IT ALREADY, PLEASE CREATE ANOTHER DIRECTORY.~~ Nevermind, fixed it in latest commit. they now download with .epub file extension names.
 
 __USAGE:__
-To download all ebooks from Project-Gutenberg database. just run the script like you normally do
+To download all ebooks from Project-Gutenberg database. just run the script like you normally do.
 `python3 PGAED.py`
-To download a spefific ebook by ID. use the code below, and it will download it.
+To download a specific ebook by ID. use the code below, and it will download it.
 `python 3 PGAED.py IDGOESHERE`
 
 *If i am encouraged i might add some more features but now, this needs to be optimized, but i am sleepy so, goodnight.
