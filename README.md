@@ -12,3 +12,5 @@ drag the py file into the directory you need to put the ebooks in, like a calibr
 
 
 ~~WARNING FOR LINUX USERS, USE THE CONVERT EPUB TOOL AT YOUR OWN RISK, IT CHANGES ALL OF THE FILES (AND FOLDERS) EXTENSIONS IN THE CURRENT DIRECTORY TO EPUB AS IT DOES NOT DO IT ALREADY, PLEASE CREATE ANOTHER DIRECTORY.~~ Nevermind, fixed it in latest commit. they now download with .epub file extension names.
+
+The Project Gutenberg Literary Archive Foundation (“the Foundation” or PGLAF), owns a compilation copyright in the collection of Project Gutenberg-tm electronic works. Nearly all the individual works in the collection are in the public domain in the United States. Project Gutenberg buys the rights for books which are not in public domain but most of the books are indeed in public domain. They don't have copyright infringement policies stuck to them.
