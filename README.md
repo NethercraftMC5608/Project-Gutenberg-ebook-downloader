@@ -1,6 +1,6 @@
 # Project-Gutenberg-all-ebook-downloader
 Downloads all 60000+ ebooks from Project Gutenberg's Database.
-
+***Right now, this tool only downloads epub file***
 NOTE: everyone knows that a shitty programmer, has shitty code. and i am that programmer.
 
 Easy to change, some things implemented dont work, but im lazy so i leave it in, so yeah, 
